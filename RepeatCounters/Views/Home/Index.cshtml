@@ -13,5 +13,7 @@
 
 @if (Model != null)
 {
+    <p>You searched for: @Model.GetInputWord()</p>
+    <p>You searched within: @Model.GetInputSentence()</p>
     <p>Your word appears @Model.FindRepeats() times.</p>
 }
