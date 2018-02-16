@@ -29,8 +29,6 @@ namespace RepeatCounters.Tests
          ViewResult indexView = controller.Index() as ViewResult;
 
          var result = indexView.ViewData.Model;
-
-         Assert.AreNotEqual(result, null);
          Assert.IsInstanceOfType(result, typeof(RepeatCounter));
        }
     }
