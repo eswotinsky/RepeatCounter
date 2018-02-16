@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace CoinCombinations
+namespace RepeatCounters
 {
     public class Program
     {

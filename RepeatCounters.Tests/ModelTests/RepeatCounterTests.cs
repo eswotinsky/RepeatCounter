@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RepeatCounter.Models;
+using RepeatCounters.Models;
 
-namespace RepeatCounter.TestTools
+namespace RepeatCounters.TestTools
 {
     [TestClass]
-    public class RepeatCounterTest
+    public class RepeatCountersTest
     {
         [TestMethod]
         public void FindRepeats_InputIsSingleChar_True()
