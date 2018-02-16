@@ -15,8 +15,12 @@ namespace RepeatCounters.Controllers
     [HttpPost("/")]
     public ActionResult Create()
     {
-      RepeatCounter userInput = new RepeatCounter(Request.Form["word-input"], Request.Form["sentence-input"]);
-      return View("Index", userInput);
+        if (Request.Form["word-input"] == "" || Request.Form["sentence-input"] == "")
+        {
+            return View("Index");
+        }
+        RepeatCounter userInput = new RepeatCounter(Request.Form["word-input"], Request.Form["sentence-input"]);
+        return View("Index", userInput);
     }
   }
 }

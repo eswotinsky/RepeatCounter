@@ -1,3 +1,7 @@
+Program should check whether both input fields contain a value when submitted. If one/both are missing, nothing new should be displayed.
+    Example input: (none)
+    Example output: (return view of Index)
+
 Program should check a single-character word against a string of words, returning the number of times that the single-character word appears in the string.
     Example input: "I", "I am the walrus"
     Example output: 1
