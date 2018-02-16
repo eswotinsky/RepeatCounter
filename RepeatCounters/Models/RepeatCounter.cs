@@ -11,8 +11,8 @@ namespace RepeatCounters.Models
 
         public RepeatCounter(string inputWord, string inputSentence)
         {
-            _inputWord = inputWord;
-            _inputSentence = inputSentence;
+            _inputWord = inputWord.ToLower();
+            _inputSentence = inputSentence.ToLower();
         }
 
         public int FindRepeats()
