@@ -1,0 +1,14 @@
+<h1>Repeat Counter</h1>
+
+<form action="/" method="post">
+    <input type="text" name="word-input">
+    <label for="word-input">Enter a word to search for:</label>
+
+    <input type="text" name="sentence-input">
+    <label for="sentence-input">Enter some text to search within:</label>
+</form>
+
+@if (Model != null)
+{
+    <p>Your word appears @Model.FindRepeats() times.</p>
+}
