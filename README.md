@@ -8,6 +8,11 @@ Program should check a multiple-character word against a string of words, return
     Example output: 1
 
 
+Program should ignore capitalization for purposes of finding matches between inputted word and inputted sentence.
+    Example input: "ThE", "I am the walrus"
+    Example output: 1
+    
+
 Program should only count full-word matches, not partial ones (i.e. ignoring when the first string passed in is contained within a word in the second string).
     Example input: "the", "Bring the thesaurus to the bookshelf"
-    Example output: "2"
+    Example output: 2
