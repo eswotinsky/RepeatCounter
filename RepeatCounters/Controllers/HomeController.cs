@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using RepeatCounters.Models;
 using System.Collections.Generic;
+using RepeatCounters.Models;
 
 namespace RepeatCounters.Controllers
 {
