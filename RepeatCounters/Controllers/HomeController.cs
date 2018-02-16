@@ -18,6 +18,5 @@ namespace RepeatCounters.Controllers
       RepeatCounter userInput = new RepeatCounter(Request.Form["word-input"], Request.Form["sentence-input"]);
       return View("Index", userInput);
     }
-
   }
 }

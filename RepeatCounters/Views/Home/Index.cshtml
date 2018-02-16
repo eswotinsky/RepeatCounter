@@ -1,19 +1,39 @@
-<h1>Repeat Counter</h1>
-
-<form action="/" method="post">
-    <input type="text" name="word-input">
-    <label for="word-input">Enter a word to search for:</label>
-
-    <input type="text" name="sentence-input">
-    <label for="sentence-input">Enter some text to search within:</label>
-
-    <button type="submit" name="button">Clicky</button>
-
-</form>
-
-@if (Model != null)
-{
-    <p>You searched for: @Model.GetInputWord()</p>
-    <p>You searched within: @Model.GetInputSentence()</p>
-    <p>Your word appears @Model.FindRepeats() times.</p>
+@{
+    Layout = "_Layout";
 }
+
+<div class="container">
+    <h1>Repeat Counter</h1>
+
+
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="word-input">Enter a word to search for:</label>
+            <input class="form-control" type="text" name="word-input" placeholder="Enter a word">
+        </div>
+        <div class="form-group">
+            <label for="sentence-input">Enter some text to search within:</label>
+            <input class="form-control" type="text" name="sentence-input" placeholder="Enter some text">
+
+        </div>
+        <button type="submit" name="button">Let's Get Searching</button>
+    </form>
+<hr>
+    @if (Model != null)
+    {
+        @if (Model.FindRepeats() == 0)
+        {
+            <h4>Sorry, no matches found!</h4>
+        }
+        else if (Model.FindRepeats() == 1)
+        {
+            <h4><strong>Your word appears @Model.FindRepeats() time.</strong></h4>
+        }
+        else if (Model.FindRepeats() > 1)
+        {
+            <h4><strong>Your word appears @Model.FindRepeats() times.</strong></h4>
+        }
+        <p>You searched for: @Model.GetInputWord()</p>
+        <p>You searched within: @Model.GetInputSentence()</p>
+    }
+</div>
