@@ -5,7 +5,7 @@
 <div class="container">
 
     <div style="background-color:aliceblue">
-        <h1><strong>Repeat Counter<strong></h1>
+        <h1><strong>Repeat Counter</strong></h1>
         <form action="/" method="post">
             <div class="form-group">
                 <label for="word-input">Enter a word to search for:</label>
@@ -15,14 +15,14 @@
                 <label for="sentence-input">Enter some text to search within:</label>
                 <input class="form-control" type="text" name="sentence-input" placeholder="Enter some text">
             </div>
-            <button type="submit" name="button">Let's Get Searching</button>
+            <button class="btn btn-primary" type="submit" name="button">Let's Get Searching</button>
         </form>
         <hr>
     </div>
 
-    <div class="well" style="background-color:palegoldenrod">
-        @if (Model != null)
-        {
+    @if (Model != null)
+    {
+        <div class="well" style="background-color:palegoldenrod">
             @if (Model.FindRepeats() == 0)
             {
                 <h4><strong>Sorry, no matches found!</strong></h4>
@@ -37,7 +37,7 @@
             }
             <p><strong>You searched for: </strong>@Model.GetInputWord()</p>
             <p><strong>You searched within: </strong>@Model.GetInputSentence()</p>
-        }
-    </div>
+        </div>
+    }
 
 </div>
