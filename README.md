@@ -8,7 +8,7 @@ A web app, built with C#, that allows users to enter two text strings and search
 
 2. Clone this repository.
 
-3. In your preferred shell, navigate to the address-book folder and run the following commands:
+3. In your preferred shell, navigate to the RepeatCounters folder and run the following commands:
 
  ```
  $ dotnet restore
